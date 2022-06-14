@@ -1,12 +1,9 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-import ResponsiveAppBar from "./components/NavBar";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css';
 
-const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <StrictMode>
-    <ResponsiveAppBar>
-    </ResponsiveAppBar>
-  </StrictMode>,
-  rootElement
+  <App />,
+  document.getElementById('root')
 );
