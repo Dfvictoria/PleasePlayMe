@@ -1,20 +1,9 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-import ResponsiveAppBar from "./components/NavBar";
+//@ts-check
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
-    <ResponsiveAppBar>
-    </ResponsiveAppBar>
-  </StrictMode>,
-  rootElement
-);
+import ResponsiveAppBar from "./Components/NavBar.jsx";
 
 function App () {
-    return <>
-    <ResponsiveAppBar/>
-    </>
+    return <ResponsiveAppBar/>;
 }
 
 export default App
