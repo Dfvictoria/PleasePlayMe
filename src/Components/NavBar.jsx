@@ -12,6 +12,9 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import CartWidget from "./CartWidget";
+import logo from "../assets/logo-transparente.png"
+import "./NavBar.css"
 
 const pages = ["Productos", "Clases", "Contacto"];
 const settings = ["Cuenta", "Salir"];
@@ -37,26 +40,17 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static" style={{ backgroundColor: "white" }}>
-      <Container maxWidth="xl">
+      <Typography id="titulo"
+        variant="h3"
+        noWrap
+        component="a"
+        href=""
+      >
+        Please Play Me
+      </Typography>
+      <Container id="container" maxWidth="xl">
+        
         <Toolbar disableGutters>
-          <Typography
-            variant="h3"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 35,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 900,
-              letterSpacing: "1rem",
-              color: "black",
-              textDecoration: "none",
-            }}
-          >
-            Please Play Me
-          </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -109,10 +103,10 @@ const ResponsiveAppBar = () => {
           ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
+              <Button  id="menuItems"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 3.5, color: "black", display: "block" }}
+                sx={{ my: 2, color: "black", display: "block", mt:7, ml:4 }}
               >
                 {page}
               </Button>
@@ -121,12 +115,12 @@ const ResponsiveAppBar = () => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Expandir">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar />
+              <IconButton id="expandir" onClick={handleOpenUserMenu} sx={{ p: 0, mt: 2 }}>
+                <Avatar src={logo} id="logo"/>
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: "45px" }}
+              sx={{ mt: "45px", ml:0 }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
@@ -148,6 +142,9 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
+          <IconButton>
+            <CartWidget cant="10"/>
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>

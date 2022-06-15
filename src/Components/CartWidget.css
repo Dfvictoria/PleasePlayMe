@@ -1,0 +1,13 @@
+#cant {
+font-size: smaller;
+position: relative;
+left:27rem;
+bottom: 8.5rem;
+}
+
+#cartIcon {
+    font-size:3rem;
+    position: relative;
+    bottom: 3rem;
+    left:25rem
+}

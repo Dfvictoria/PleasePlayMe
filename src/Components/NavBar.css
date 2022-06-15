@@ -1,0 +1,37 @@
+#container {
+    height: 2rem;
+}
+
+#titulo {
+    position:relative;
+    color:black;
+    left:10rem;
+    top:1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+#menuItems {
+    color:black;
+    position: relative;
+    left: 25rem;
+    bottom: 7rem;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5rem;
+}
+
+#expandir {
+    position:relative;
+    bottom:7rem;
+    width:4.6rem;
+    height:4.6rem;
+    left:5rem;
+}
+
+#logo {
+  position: relative;
+  top: 0.5rem;
+  width: 4.6rem;
+  height:4.6rem;
+}
