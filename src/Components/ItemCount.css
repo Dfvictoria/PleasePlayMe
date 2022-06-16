@@ -1,0 +1,21 @@
+.setBotones {
+    position: relative;
+    top: 2rem;
+    right: 0rem;
+}
+
+.itemShop {
+    font-weight: 800;
+}
+
+#contador {
+    font-weight: 500;
+    color:black;
+}
+
+.agregarCarrito {
+    width: 11rem ;
+    top: 3rem;
+    color:white;
+}
+
