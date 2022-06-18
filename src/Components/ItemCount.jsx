@@ -20,8 +20,9 @@ export default function ItemCount({ stock, initial, onAdd }) {
       alert("La cantidad ingresada debe ser mayor a 0");
       setContador(1);
     }
+
     if (Contador > stock) {
-      alert("No hay más stock");
+      alert("No hay más stock de este producto");
       setContador(stock);
     }
   }, [Contador, stock]);
@@ -54,7 +55,11 @@ export default function ItemCount({ stock, initial, onAdd }) {
         </Button>
         <Button onClick={sumar}>+</Button>
       </ButtonGroup>
-      <Button className="agregarCarrito" variant="contained">
+      <Button
+        onClick={() => onAdd(Contador)}
+        className="agregarCarrito"
+        variant="contained"
+      >
         Agregar
       </Button>
     </Box>
