@@ -13,8 +13,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import CartWidget from "./CartWidget";
-import logo from "../assets/logo-transparente.png"
-import "./NavBar.css"
+import logo from "./assets/logo-transparente.png";
+import "./NavBar.css";
 
 const pages = ["Productos", "Clases", "Contacto"];
 const settings = ["Cuenta", "Salir"];
@@ -40,16 +40,10 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static" style={{ backgroundColor: "white" }}>
-      <Typography id="titulo"
-        variant="h3"
-        noWrap
-        component="a"
-        href=""
-      >
+      <Typography id="titulo" variant="h3" noWrap component="a" href="">
         Please Play Me
       </Typography>
       <Container id="container" maxWidth="xl">
-        
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -103,24 +97,29 @@ const ResponsiveAppBar = () => {
           ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button  id="menuItems"
+              <Button
+                id="menuItems"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block", mt:7, ml:4 }}
+                sx={{ my: 2, color: "black", display: "block", mt: 7, ml: 4 }}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0.1 }}>
             <Tooltip title="Expandir">
-              <IconButton id="expandir" onClick={handleOpenUserMenu} sx={{ p: 0, mt: 2 }}>
-                <Avatar src={logo} id="logo"/>
+              <IconButton
+                id="expandir"
+                onClick={handleOpenUserMenu}
+                sx={{ p: 0, mt: 2 }}
+              >
+                <Avatar src={logo} id="logo" />
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: "45px", ml:0 }}
+              sx={{ mt: "45px", ml: 0 }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
@@ -142,8 +141,16 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <IconButton>
-            <CartWidget cant="10"/>
+          <IconButton
+            sx={{
+              ml: 1,
+              "&.MuiButtonBase-root:hover": {
+                bgcolor: "transparent",
+              },
+            }}
+            className="cart"
+          >
+            <CartWidget cant="10" />
           </IconButton>
         </Toolbar>
       </Container>

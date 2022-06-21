@@ -1,0 +1,21 @@
+.divProductos {
+    margin-left: 12rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    display:inline-block;
+}
+
+.precio {
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.descripcion {
+    text-align: center;
+}

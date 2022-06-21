@@ -5,9 +5,8 @@ import ItemListContainer from "./Components/ItemListContainer.jsx";
 import ItemCount from "./Components/ItemCount.jsx";
 
 function App() {
-
-  let stock = 10
-  let initial = 1
+  let stock = 10;
+  let initial = 1;
   function onAdd() {
     alert("Agregaste al carrito");
   }
@@ -15,10 +14,10 @@ function App() {
   return (
     <div>
       <ResponsiveAppBar />
-      <ItemListContainer greeting="Los mejores precios en instrumentos musicales" />
-      <ItemCount stock={stock} initial={initial} onAdd={onAdd}></ItemCount>
+      <ItemListContainer />
+      <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
     </div>
-  );  
+  );
 }
 
 export default App;
