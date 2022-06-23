@@ -10,12 +10,20 @@ export default function ItemDetailContainer() {
     setTimeout(() => {
       fetch("../../productos.json")
         .then((response) => response.json())
-        .then (Item => {setItem(Item)})
+        .then (Item => {setItem(Item.productos)})
     }, 2000);
   }, []);
 
 return (
-  <ItemDetail precio={Item.precio}/>
+  <div>
+    {Item.map((Item)=>{
+      return (
+        <div>
+          <ItemDetail key={Item.id} titulo={Item.titulo} descripcion={Item.descripcion} precio={Item.precio} imagen={Item.imagen} />
+        </div>
+      )
+    })}
+  </div>
 )
 
 }
