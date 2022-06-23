@@ -3,6 +3,8 @@
 import ResponsiveAppBar from "./Components/NavBar.jsx";
 import ItemListContainer from "./Components/ItemListContainer.jsx";
 import ItemCount from "./Components/ItemCount.jsx";
+import ItemDetail from "./Components/ItemDetail.jsx";
+import ItemDetailContainer from "./Components/ItemDetailContainer.jsx";
 
 function App() {
   let stock = 10;
@@ -14,8 +16,9 @@ function App() {
   return (
     <div>
       <ResponsiveAppBar />
-      <ItemListContainer />
-      <ItemCount stock={stock} initial={initial} onAdd={onAdd} />
+      {/* <ItemListContainer /> */}
+      {/* <ItemCount stock={stock} initial={initial} onAdd={onAdd} /> */}
+      <ItemDetailContainer/>
     </div>
   );
 }
