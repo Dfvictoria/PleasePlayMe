@@ -28,12 +28,12 @@ export default function ItemCount({ stock, initial, onAdd }) {
   }, [Contador, stock]);
 
   return (
-    <Box
+    <Box className="box"
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#DCDCDC",
+        backgroundColor: "white",
         width: 200,
         height: 200,
         ml: 2,
@@ -42,8 +42,6 @@ export default function ItemCount({ stock, initial, onAdd }) {
         },
       }}
     >
-      <div className="itemShop">Bajo Fender Jaguar</div>
-
       <ButtonGroup
         className="setBotones"
         variant="contained"

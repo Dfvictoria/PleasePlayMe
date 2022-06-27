@@ -5,7 +5,9 @@
             "titulo": "Bajo Fender Jaguar",
             "descripcion": "Bajo 4 Cuerdas Squier By Fender Vintage Modified Jaguar Bass. Cuerpo: Agathis. Cuello: Maple, C-Shape. Diapasón: Palo de rosa. Trastes: 20. Microfono Humbucker.Controles Volumen agudos, medios, graves.",
             "precio": 130000,
-            "imagen": "item1Vertical.jpg"
+            "stock": "10",
+            "imagen": "/item1Vertical.jpg",
+            "category": "cuerdas"
         }
     ]
 }

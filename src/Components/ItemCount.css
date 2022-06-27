@@ -19,3 +19,8 @@
     color:white;
 }
 
+.box {
+    position: relative;
+    left:110rem;
+    bottom:24rem;
+}

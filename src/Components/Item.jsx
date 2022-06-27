@@ -6,20 +6,18 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import img1 from '../Components/assets/item1.jpg'
-
 
 export default function Item(dataProductos) {
-
   return (
-
     <div>
-      <Card sx={{ minWidth: 345, maxWidth: 345, minHeight: 300 }}>
+      <Card
+        sx={{ minWidth: 345, maxWidth: 345, minHeight: 300, maxHeight: 345 }}
+      >
         <CardActionArea>
-          <CardMedia 
+          <CardMedia
             component="img"
             height="140"
-            image={img1}
+            image={dataProductos.image}
             alt={dataProductos.title}
           />
           <CardContent>

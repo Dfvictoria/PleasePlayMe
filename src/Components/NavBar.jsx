@@ -16,7 +16,7 @@ import CartWidget from "./CartWidget";
 import logo from "./assets/logo-transparente.png";
 import "./NavBar.css";
 
-const pages = ["Productos", "Clases", "Contacto"];
+const pages = ["Cuerdas", "Percusión", "Accesorios"];
 const settings = ["Cuenta", "Salir"];
 
 const ResponsiveAppBar = () => {
@@ -40,7 +40,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static" style={{ backgroundColor: "white" }}>
-      <Typography id="titulo" variant="h3" noWrap component="a" href="">
+      <Typography id="titulo" variant="h3" noWrap component="a" href="/">
         Please Play Me
       </Typography>
       <Container id="container" maxWidth="xl">

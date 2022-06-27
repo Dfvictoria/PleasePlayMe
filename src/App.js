@@ -2,24 +2,20 @@
 
 import ResponsiveAppBar from "./Components/NavBar.jsx";
 import ItemListContainer from "./Components/ItemListContainer.jsx";
-import ItemCount from "./Components/ItemCount.jsx";
-import ItemDetail from "./Components/ItemDetail.jsx";
 import ItemDetailContainer from "./Components/ItemDetailContainer.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  let stock = 10;
-  let initial = 1;
-  function onAdd() {
-    alert("Agregaste al carrito");
-  }
-
   return (
-    <div>
+    <BrowserRouter>
       <ResponsiveAppBar />
-      {/* <ItemListContainer /> */}
-      {/* <ItemCount stock={stock} initial={initial} onAdd={onAdd} /> */}
-      <ItemDetailContainer/>
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />}></Route>
+        <Route path="/category/:id" element={<ItemListContainer />}></Route>
+        <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
+      </Routes>
+      {/* Footer */}
+    </BrowserRouter>
   );
 }
 
