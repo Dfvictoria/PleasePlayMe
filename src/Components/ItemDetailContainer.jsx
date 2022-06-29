@@ -2,28 +2,45 @@
 
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail.jsx";
+import { useParams } from "react-router-dom";
+import dataProductos from "./dataProductos.js";
 
 export default function ItemDetailContainer() {
-  const [Item, setItem] = useState([]);
+  const [item, setItem] = useState([]);
+  let { id } = useParams();
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch("../../productos.json")
-        .then((response) => response.json())
-        .then (Item => {setItem(Item.productos)})
-    }, 2000);
-  }, []);
+    const mockAsync = new Promise((res) => {
+      setTimeout(() => {
+        res(dataProductos);
+        mockAsync.then(() => {
+          let productosFiltrados = dataProductos.find((item) => item.id == id);
+          // @ts-ignore
+          setItem(productosFiltrados);
+        });
+      }, 2000);
+    });
+  }, [id]);
 
-return (
-  <div>
-    {Item.map((Item)=>{
-      return (
-        <div>
-          <ItemDetail key={Item.id} titulo={Item.titulo} descripcion={Item.descripcion} precio={Item.precio} imagen={Item.imagen} />
-        </div>
-      )
-    })}
-  </div>
-)
-
+  return (
+    <div>
+      <ItemDetail
+        item={item}
+        key={
+          // @ts-ignore
+          item.id
+        }
+        // @ts-ignore
+        title={item.title}
+        // @ts-ignore
+        image={item.imageVertical}
+        // @ts-ignore
+        price={item.price}
+        // @ts-ignore
+        description={item.descriptionLong}
+        // @ts-ignore
+        category= {item.category}
+      ></ItemDetail>
+    </div>
+  );
 }

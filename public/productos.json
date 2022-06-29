@@ -1,13 +1,112 @@
 {
-    "productos": [
-        {
-            "id": 1,
-            "titulo": "Bajo Fender Jaguar",
-            "descripcion": "Bajo 4 Cuerdas Squier By Fender Vintage Modified Jaguar Bass. Cuerpo: Agathis. Cuello: Maple, C-Shape. Diapasón: Palo de rosa. Trastes: 20. Microfono Humbucker.Controles Volumen agudos, medios, graves.",
-            "precio": 130000,
-            "stock": "10",
-            "imagen": "/item1Vertical.jpg",
-            "category": "cuerdas"
-        }
-    ]
+  "productos": [
+    {
+      "id": 1,
+      "titulo": "Bajo Fender Jaguar",
+      "descripcion": "Bajo 4 Cuerdas Squier By Fender Vintage Modified Jaguar Bass. Cuerpo: Agathis. Cuello: Maple, C-Shape. Diapasón: Palo de rosa. Trastes: 20. Microfono Humbucker.Controles Volumen agudos, medios, graves.",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "/item1Vertical.jpg",
+      "category": "cuerdas"
+    },
+    {
+      "id": 2,
+      "titulo": "Guitarra Acústica Martin D12",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "/item2Vertical.jpg",
+      "category": "cuerdas"
+    },
+    {
+      "id": 3,
+      "titulo": "Eléctrica Gibson ES-335",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "/item3Vertical.png",
+      "category": "cuerdas"
+    },
+    {
+      "id": 4,
+      "titulo": "Guitarra Criolla Yamaha C70",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "/item4Vertical.jpg",
+      "category": "cuerdas"
+    },
+    {
+      "id": 5,
+      "titulo": "Bateria Mapex Prodigy",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/4iYfnp7.jpg",
+      "category": "percusión"
+    },
+    {
+      "id": 6,
+      "titulo": "Set De Platillos Stagg",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/kTamkEt.png",
+      "category": "percusión"
+    },
+    {
+      "id": 7,
+      "titulo": "Cajon Peruano",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/ria0kNQ.png",
+      "category": "percusión"
+    },
+    {
+      "id": 8,
+      "titulo": "Batería Electrónica Midiplus Ed9",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/Vyj9AAz.png",
+      "category": "percusión"
+    },
+    {
+      "id": 9,
+      "titulo": "Micrófono Shure SM SM58-LC",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/8I7XMkS.png",
+      "category": "accesorios"
+    },
+    {
+      "id": 10,
+      "titulo": "Placa De Audio Interfaz",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/bAxEDhF.png",
+      "category": "accesorios"
+    },
+    {
+      "id": 11,
+      "titulo": "Funda Premium Reforzada",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/wySZrf3.png",
+      "category": "accesorios"
+    },
+    {
+      "id": 12,
+      "titulo": "Afinador Korg Ga-40bk",
+      "descripcion": "",
+      "precio": 130000,
+      "stock": "10",
+      "imagen": "https://i.imgur.com/lAAPo2U.png",
+      "category": "accesorios"
+    }
+  ]
 }

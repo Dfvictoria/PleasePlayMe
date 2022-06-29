@@ -6,20 +6,26 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { Link } from "react-router-dom";
 
-export default function Item(dataProductos) {
+export default function Item(Item) {
   return (
     <div>
       <Card
-        sx={{ minWidth: 345, maxWidth: 345, minHeight: 300, maxHeight: 345 }}
+        sx={{ minWidth: 345, maxWidth: 380, minHeight: 300, maxHeight: 380 }}
       >
         <CardActionArea>
-          <CardMedia
+        <Link style={{
+          textDecoration: "none",
+          color: "inherit"}} to= {`/item/${Item.id}`}>
+        <CardMedia
             component="img"
             height="140"
-            image={dataProductos.image}
-            alt={dataProductos.title}
+            image={Item.image}
+            alt={Item.title}
           />
+        </Link>
+          
           <CardContent>
             <Typography
               gutterBottom
@@ -27,18 +33,18 @@ export default function Item(dataProductos) {
               component="div"
               className="titulo"
             >
-              {dataProductos.title}
+              {Item.title}
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               className="descripcion"
             >
-              {dataProductos.description}
+              {Item.description}
             </Typography>
           </CardContent>
         </CardActionArea>
-        <div className="precio">${dataProductos.price}</div>
+        <div className="precio">${Item.price}</div>
       </Card>
     </div>
   );

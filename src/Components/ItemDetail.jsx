@@ -6,29 +6,34 @@ import Button from "@mui/material/Button";
 import "./ItemDetail.css";
 import Box from "@mui/material/Box";
 
-function ItemDetail(Item) {
+export default function ItemDetail(item) {
+
   return (
+    
     <React.Fragment>
+      
       <Box
+      
         className="ItemDetailImagen"
         component="img"
-        alt={Item.titulo}
-        src={Item.imagen}
+        alt={item.title}
+        src={item.image}
       />
+      
       <CardContent className="ItemDetailContainer">
         <Typography sx={{ fontSize: 40 }} color="text.secondary" gutterBottom>
-          {Item.titulo}
+          {item.titulo}
         </Typography>
-        <Typography variant="h5" component="div"></Typography>
+        <Typography variant="h5" component="div" id="ItemDetailContainerTitle">{item.title}</Typography>
         <Typography
           id="ItemDetailContainerPrecio"
           sx={{ mb: 1.5, fontSize: 30 }}
           color="text.secondary"
         >
-          ${Item.precio}
+          ${item.price}
         </Typography>
-        <Typography className="ItemDetailContainerDescripcion" variant="body2">
-          {Item.descripcion}
+        <Typography className="ItemDetailContainerDescripcion" variant="body1">
+          {item.description}
         </Typography>
         <CardActions>
           <Button size="small" id="ItemDetailContainerAgregar">
@@ -37,7 +42,7 @@ function ItemDetail(Item) {
         </CardActions>
       </CardContent>
     </React.Fragment>
+    
   );
+  
 }
-
-export default ItemDetail;

@@ -14,9 +14,10 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import CartWidget from "./CartWidget";
 import logo from "./assets/logo-transparente.png";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-const pages = ["Cuerdas", "Percusión", "Accesorios"];
+const pages = ["cuerdas", "percusión", "accesorios"];
 const settings = ["Cuenta", "Salir"];
 
 const ResponsiveAppBar = () => {
@@ -40,9 +41,19 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static" style={{ backgroundColor: "white" }}>
-      <Typography id="titulo" variant="h3" noWrap component="a" href="/">
-        Please Play Me
-      </Typography>
+      <Link
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          textTransform: "uppercase",
+        }}
+        to="/"
+      >
+        <Typography id="titulo" variant="h3">
+          Please Play Me
+        </Typography>
+      </Link>
+
       <Container id="container" maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -74,7 +85,18 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    <Link
+                      style={{
+                        textDecoration: "none",
+                        color: "inherit",
+                        textTransform: "uppercase",
+                      }}
+                      to={`/category/${page}`}
+                    >
+                      {page}
+                    </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -82,8 +104,6 @@ const ResponsiveAppBar = () => {
 
           <Typography
             noWrap
-            component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -103,7 +123,16 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block", mt: 7, ml: 4 }}
               >
-                {page}
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    textTransform: "uppercase",
+                  }}
+                  to={`/category/${page}`}
+                >
+                  {page}
+                </Link>
               </Button>
             ))}
           </Box>
