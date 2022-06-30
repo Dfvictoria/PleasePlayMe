@@ -17,10 +17,17 @@
     width: 11rem ;
     top: 3rem;
     color:white;
+    position: relative;
+}
+
+.irAlCarro {
+    top: 3rem;
+    color:white;
+    position: relative;
+    top:5rem;
 }
 
 .box {
-    position: relative;
-    left:110rem;
-    bottom:24rem;
+    position:relative;
+    left:10rem;
 }

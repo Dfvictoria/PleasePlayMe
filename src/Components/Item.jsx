@@ -15,17 +15,21 @@ export default function Item(Item) {
         sx={{ minWidth: 345, maxWidth: 380, minHeight: 300, maxHeight: 380 }}
       >
         <CardActionArea>
-        <Link style={{
-          textDecoration: "none",
-          color: "inherit"}} to= {`/item/${Item.id}`}>
-        <CardMedia
-            component="img"
-            height="140"
-            image={Item.image}
-            alt={Item.title}
-          />
-        </Link>
-          
+          <Link
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+            to={`/item/${Item.id}`}
+          >
+            <CardMedia
+              component="img"
+              height="140"
+              image={Item.image}
+              alt={Item.title}
+            />
+          </Link>
+
           <CardContent>
             <Typography
               gutterBottom

@@ -1,34 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import "./ItemCount.css";
 
-export default function ItemCount({ stock, initial, onAdd }) {
-  let [Contador, setContador] = useState(initial);
-
-  function sumar() {
-    setContador(++Contador);
-  }
-
-  function restar() {
-    setContador(--Contador);
-  }
-
-  useEffect(() => {
-    if (Contador < 1) {
-      alert("La cantidad ingresada debe ser mayor a 0");
-      setContador(1);
-    }
-
-    if (Contador > stock) {
-      alert("No hay más stock de este producto");
-      setContador(stock);
-    }
-  }, [Contador, stock]);
-
+export default function ItemCount({ add, remove, onAdd, count }) {
   return (
-    <Box className="box"
+    <Box
+      className="box"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -47,19 +27,25 @@ export default function ItemCount({ stock, initial, onAdd }) {
         variant="contained"
         aria-label="outlined button group"
       >
-        <Button onClick={restar}>-</Button>
+        <Button onClick={remove}>-</Button>
         <Button variant="outlined" disabled>
-          <div id="contador">{Contador}</div>
+          <div id="contador">{count}</div>
         </Button>
-        <Button onClick={sumar}>+</Button>
+        <Button onClick={add}>+</Button>
       </ButtonGroup>
       <Button
-        onClick={() => onAdd(Contador)}
+        onClick={() => onAdd(count)}
         className="agregarCarrito"
         variant="contained"
       >
         Agregar
       </Button>
+
+      <Link to="/Cart">
+        <Button className="irAlCarro" variant="contained">
+          Ir al Carro
+        </Button>
+      </Link>
     </Box>
   );
 }

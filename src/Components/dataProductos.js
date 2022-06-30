@@ -11,6 +11,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/LMveY0u.jpg",
     imageVertical: "https://i.imgur.com/dhorDsx.jpg",
     category: "cuerdas",
+    stock: 4,
   },
   {
     id: "2",
@@ -21,6 +22,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/QidVY3k.jpg",
     imageVertical: 'https://i.imgur.com/XxRS4yRh.jpg',
     category: "cuerdas",
+    stock: 2,
   },
   {
     id: "3",
@@ -31,6 +33,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/inSSkH1.png",
     imageVertical: 'https://i.imgur.com/XGUUcdI.png',
     category: "cuerdas",
+    stock: 6,
   },
   {
     id: "4",
@@ -41,6 +44,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/ySgUO8rh.jpg",
     imageVertical: 'https://i.imgur.com/imD6Tmhh.jpg',
     category: "cuerdas",
+    stock: 20,
   },
 
   {
@@ -52,6 +56,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/3uUg7LJ.jpg",
     imageVertical: "https://i.imgur.com/aqJ9ad5.jpg",
     category: "percusión",
+    stock: 8,
   },
 
   {
@@ -63,6 +68,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/kTamkEt.png",
     imageVertical: 'https://i.imgur.com/kTamkEt.png',
     category: "percusión",
+    stock: 42,
   },
 
   {
@@ -74,6 +80,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/ria0kNQ.png",
     imageVertical: 'https://i.imgur.com/ria0kNQ.png',
     category: "percusión",
+    stock: 110,
   },
 
   {
@@ -85,6 +92,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/Vyj9AAz.png",
     imageVertical: 'https://i.imgur.com/Vyj9AAz.png',
     category: "percusión",
+    stock: 12,
   },
 
   {
@@ -96,6 +104,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/8I7XMkS.png",
     imageVertical:'https://i.imgur.com/X0vxpne.jpg',
     category: "accesorios",
+    stock: 31,
   },
 
   {
@@ -107,6 +116,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/bAxEDhF.png",
     imageVertical: 'https://i.imgur.com/bAxEDhF.png',
     category: "accesorios",
+    stock: 16,
   },
 
   {
@@ -118,6 +128,7 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/wySZrf3.png",
     imageVertical: "https://i.imgur.com/mAx2r3D.png",
     category: "accesorios",
+    stock: 80,
   },
 
   {
@@ -129,7 +140,9 @@ const dataProductos = [
     imageUrl: "https://i.imgur.com/lAAPo2U.png",
     imageVertical: "https://i.imgur.com/lAAPo2U.png",
     category: "accesorios",
+    stock: 206,
   },
+
 ];
 
 export default dataProductos;

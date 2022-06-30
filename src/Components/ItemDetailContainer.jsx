@@ -40,6 +40,8 @@ export default function ItemDetailContainer() {
         description={item.descriptionLong}
         // @ts-ignore
         category= {item.category}
+        // @ts-ignore
+        stock = {item.stock}
       ></ItemDetail>
     </div>
   );
