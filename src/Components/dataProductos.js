@@ -53,7 +53,7 @@ const dataProductos = [
     description: "5 cuerpos Con Fierros + Platillos + Banqueta",
     descriptionLong:"Tom 12x9, Tom 13x10, Tom de piso 16x16, redoblante 14x55, bombo 22x16, parches Remo®, crash 16, Hi-Hat 14. Con acabado recubierto, los tambores están equipados con Prodigy, el nuevo modelo que utiliza un solo punto de contacto.",
     price: 160000,
-    imageUrl: "https://i.imgur.com/3uUg7LJ.jpg",
+    imageUrl: "https://i.imgur.com/aqJ9ad5.jpg",
     imageVertical: "https://i.imgur.com/aqJ9ad5.jpg",
     category: "percusión",
     stock: 8,
